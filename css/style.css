@@ -1,0 +1,89 @@
+:root{
+    --radius: 20px;
+    --bg: #000b19;
+    --primary: #1697ef;
+    --secondary: #f5f5f5;
+    --font: 'Inter';
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    color: white;
+    overflow: hidden;
+    background-color: var(--bg);
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 1em;
+    background-color: var(--bg);
+    height: 95.9vh;
+}
+.container{
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    padding: 1em;
+}
+.details{
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    padding: 1em;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.forecast{
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forcs-item{
+    padding-inline: 1em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    margin: 10px;
+}
+.forcs-item:hover{
+    padding-inline: 1em;
+    border-radius: 20px;
+    display: flex;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    color: var(--primary) !important;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+[data-temp]{
+    font-size: 5em;
+}
+.item-detail{
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #dddddd;
+    margin: 5px;
+    color: black !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+}
